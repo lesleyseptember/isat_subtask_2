@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>  // For rand() and srand()
-#include <ctime>    // For time()
+#include <cstdlib>  
+#include <ctime>    
 
 using namespace std;
 
-// Function 1: Decimal to Binary
-string decimalToBinary(int decimal) {
+string decimalToBinary(int decimal) { //function 1: Decimal to Binary
     string binary = "";
     if (decimal == 0) return "0";
 
@@ -18,7 +17,7 @@ string decimalToBinary(int decimal) {
     return binary;
 }
 
-// Function 2: Binary to Decimal
+//binary to decimal
 int binaryToDecimal(string binary) {
     int decimal = 0;
 
@@ -32,7 +31,7 @@ int binaryToDecimal(string binary) {
     return decimal;
 }
 
-// Function 3: Decimal to Hexadecimal
+//decimal to hexadecimal
 string decimalToHexadecimal(int decimal) {
     string hex = "";
     char hexDigits[] = "0123456789ABCDEF";
@@ -48,8 +47,7 @@ string decimalToHexadecimal(int decimal) {
     return hex;
 }
 
-// Function 4: Hexadecimal to Decimal
-int hexadecimalToDecimal(string hex) {
+int hexadecimalToDecimal(string hex) { //hexadecimal to decimal
     int decimal = 0;
     for (char ch : hex) {
         decimal *= 16;
@@ -68,7 +66,7 @@ int hexadecimalToDecimal(string hex) {
     return decimal;
 }
 
-// Display menu and get user choice
+//display menu 
 void displayMenu() {
     cout << "\n===== Number Converter Menu =====\n";
     cout << "1. Convert Decimal to Binary\n";
@@ -84,7 +82,7 @@ void displayMenu() {
 int main() {
     int choice;
 
-    srand(time(0));  // random seed generation
+    srand(time(0));  
 
     do {
         displayMenu();
