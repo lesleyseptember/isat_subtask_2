@@ -5,7 +5,7 @@
 
 using namespace std;
 
-string decimalToBinary(int decimal) { //function 1: Decimal to Binary
+string decimalToBinary(int decimal) { //Decimal to Binary
     string binary = "";
     if (decimal == 0) return "0";
 
@@ -71,8 +71,8 @@ void displayMenu() {
     cout << "\n===== Number Converter Menu =====\n";
     cout << "1. Convert Decimal to Binary\n";
     cout << "2. Convert Binary to Decimal\n";
-    cout << "3. Convert Decimal to Hexadecimal\n";
-    cout << "4. Convert Hexadecimal to Decimal\n";
+    cout << "3. Convert Hexadecimal to Decimal\n";
+    cout << "4. Convert Decimal to Hexadecimal\n";
     cout << "5. Demo (Random number to Binary)\n";
     cout << "6. Exit\n";
     cout << "Enter your choice (1-6): ";
@@ -112,6 +112,16 @@ int main() {
             }
 
             case 3: {
+                string hex;
+                cout << "Enter a hexadecimal number: ";
+                cin >> hex;
+                int decimal = hexadecimalToDecimal(hex);
+                if (decimal != -1)
+                    cout << "Decimal equivalent: " << decimal << endl;
+                break;
+            }
+
+            case 4: {
                 int decimal;
                 cout << "Enter a decimal number: ";
                 cin >> decimal;
@@ -120,16 +130,6 @@ int main() {
                     break;
                 }
                 cout << "Hexadecimal equivalent: " << decimalToHexadecimal(decimal) << endl;
-                break;
-            }
-
-            case 4: {
-                string hex;
-                cout << "Enter a hexadecimal number: ";
-                cin >> hex;
-                int decimal = hexadecimalToDecimal(hex);
-                if (decimal != -1)
-                    cout << "Decimal equivalent: " << decimal << endl;
                 break;
             }
 
@@ -152,4 +152,5 @@ int main() {
 
     return 0;
 }
+
 
