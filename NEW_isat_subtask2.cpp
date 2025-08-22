@@ -5,7 +5,7 @@
 
 using namespace std;
 
-string decimalToBinary(int decimal) { //Decimal to Binary
+string decimalToBinary(int decimal) { //decimal to binary
     string binary = "";
     if (decimal == 0) return "0";
 
