@@ -66,7 +66,7 @@ int hexadecimalToDecimal(string hex) { //hexadecimal to decimal
     return decimal;
 }
 
-//display menu 
+// display menu 
 void displayMenu() {
     cout << "\n===== Number Converter Menu =====\n";
     cout << "1. Convert Decimal to Binary\n";
